@@ -4,6 +4,7 @@
 // 2) Tools>Library management
 #include <ESP8266WiFi.h>
 #include "libs/ESP8266Ping.h"
+#include "../shared/credential.h"
 // Expect to have this machine set to 10.0.0.234
 const char* ssid     = "CanadaWifi_2_4";      // SSID of local network
 const char* password = "";                // Password on network
@@ -52,10 +53,10 @@ void loop() {
   Serial.print(": ");
 
   if (Ping.ping(remote_ip)) {
-    Serial.println("SUCCESS!");
+    Serial.print("SUCCESS!");
     digitalWrite(relay_pin,HIGH);
   } else {
-    Serial.println("FAILED!");
+    Serial.print("FAILED!");
     digitalWrite(relay_pin,LOW);
   }
 
