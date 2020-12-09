@@ -6,7 +6,7 @@
 #include "libs/ESP8266Ping.h"
 // Expect to have this machine set to 10.0.0.234
 const char* ssid     = "CanadaWifi_2_4";      // SSID of local network
-const char* password = "5142931290";                // Password on network
+const char* password = "";                // Password on network
 byte mac[6];
 int relay_pin = D1;
 WiFiClientSecure client; //For ESP8266 boards
